@@ -18,6 +18,7 @@ namespace FluentTask
             foreach (var action in _actions)
                 action();
         }
+
         public Behavior Say( string sentence)
         {
             _actions.Add(() => Console.WriteLine(sentence));

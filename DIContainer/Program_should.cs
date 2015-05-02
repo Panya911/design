@@ -9,7 +9,7 @@ namespace DIContainer
         [Test]
         public void run_command_by_name()
         {
-            var command = A.Fake<ICommand>();
+            ICommand command = A.Fake<ICommand>();
             A.CallTo(() => command.Name).Returns("cmd");
             var program = new Program(new CommandLineArgs("CMD"), command);
 
